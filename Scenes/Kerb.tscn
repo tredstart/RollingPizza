@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3h3bh3aqcs5p"]
+
+[ext_resource type="Script" path="res://Scripts/Kerb.cs" id="1_bhldy"]
+[ext_resource type="Texture2D" uid="uid://coxhv5x3x2nnt" path="res://Sprites/kerb.png" id="2_i4llu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbsbu"]
+size = Vector2(44, 5)
+
+[node name="Kerb" type="StaticBody2D"]
+z_index = 10
+collision_mask = 0
+script = ExtResource("1_bhldy")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 15)
+scale = Vector2(3, 3)
+texture = ExtResource("2_i4llu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_fbsbu")

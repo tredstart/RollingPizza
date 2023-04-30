@@ -1,0 +1,33 @@
+[gd_scene load_steps=11 format=3 uid="uid://cavwdv6pcx1wh"]
+
+[ext_resource type="PackedScene" uid="uid://dh17hc7nqdvny" path="res://Scenes/Player.tscn" id="1_51dj8"]
+[ext_resource type="Script" path="res://Scripts/Main.cs" id="1_wug1t"]
+[ext_resource type="PackedScene" uid="uid://dytixopi6cb84" path="res://Scenes/NPC.tscn" id="3_kecbv"]
+[ext_resource type="PackedScene" uid="uid://bmnospvfmr2w3" path="res://Scenes/Level.tscn" id="3_wlftq"]
+[ext_resource type="PackedScene" uid="uid://d3h3bh3aqcs5p" path="res://Scenes/Kerb.tscn" id="4_5klfg"]
+[ext_resource type="PackedScene" uid="uid://cvn47bk0h4e0a" path="res://Scenes/Bush.tscn" id="4_qrypl"]
+[ext_resource type="PackedScene" uid="uid://c2x8wcvum8nx4" path="res://Scenes/House.tscn" id="5_dcx4t"]
+[ext_resource type="PackedScene" uid="uid://bdygvdua0t3pr" path="res://Scenes/Pizzeria.tscn" id="7_2556w"]
+[ext_resource type="PackedScene" uid="uid://dqis3cl4p3c45" path="res://Scenes/ParallaxGlobal.tscn" id="7_kdx5m"]
+[ext_resource type="PackedScene" uid="uid://cciqdfryrg7w5" path="res://Scenes/HUD.tscn" id="10_xi3gs"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_wug1t")
+BushScene = ExtResource("4_qrypl")
+NpcScene = ExtResource("3_kecbv")
+KerbScene = ExtResource("4_5klfg")
+HouseScene = ExtResource("5_dcx4t")
+PizzeriaScene = ExtResource("7_2556w")
+
+[node name="Player" parent="." instance=ExtResource("1_51dj8")]
+position = Vector2(0, -24)
+
+[node name="Level" parent="." instance=ExtResource("3_wlftq")]
+position = Vector2(13, 19)
+
+[node name="Pizzeria" parent="." instance=ExtResource("7_2556w")]
+
+[node name="ParallaxGlobal" parent="." instance=ExtResource("7_kdx5m")]
+
+[node name="HUD" parent="." instance=ExtResource("10_xi3gs")]

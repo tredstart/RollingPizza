@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdygvdua0t3pr"]
+
+[ext_resource type="Script" path="res://Scripts/Pizzeria.cs" id="1_hck3v"]
+[ext_resource type="Texture2D" uid="uid://dkktu0msohdn5" path="res://Sprites/pizzeria.png" id="2_b307e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uodg2"]
+size = Vector2(77, 81)
+
+[node name="Pizzeria" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_hck3v")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -70)
+scale = Vector2(2, 2)
+texture = ExtResource("2_b307e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59.5, -21)
+shape = SubResource("RectangleShape2D_uodg2")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqis3cl4p3c45"]
+
+[ext_resource type="Texture2D" uid="uid://d4lvhngwfytr5" path="res://Sprites/parallax_back.png" id="1_oa4di"]
+[ext_resource type="Texture2D" uid="uid://c8hnjcyslpngi" path="res://Sprites/parallax_mid.png" id="2_hdv22"]
+[ext_resource type="Texture2D" uid="uid://dxsdk10wm4pnb" path="res://Sprites/parallax_front.png" id="3_nrs23"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(232, -71)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(720, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(0, -88)
+texture = ExtResource("1_oa4di")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(720, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(240, -136)
+texture = ExtResource("2_hdv22")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(720, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(232, -160)
+texture = ExtResource("3_nrs23")
